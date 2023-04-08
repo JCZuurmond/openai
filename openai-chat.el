@@ -54,14 +54,16 @@
   "Send chat request.
 
 Arguments MESSAGES and CALLBACK are required for this type of request.  MESSAGES
-is the conversation data.  CALLBACK is the execuation after request is made.
+is the conversation data.  CALLBACK is the execution after request is made.
 
 Arguments CONTENT-TYPE, KEY, ORG-ID and USER are global options; however, you
 can overwrite the value by passing it in.
 
 The rest of the arugments are optional, please see OpenAI API reference page
-for more information.  Arguments here refer to MODEL,  TEMPERATURE, TOP-P, N,
-STREAM, STOP, MAX-TOKENS, PRESENCE-PENALTY, FREQUENCY-PENALTY, and LOGIT-BIAS."
+for more information.  Arguments here refer to MODEL, SUFFIX, MAX-TOKENS, TEMPERATURE, TOP-P, N,
+STREAM, LOGPROBS, STOP, PRESENCE-PENALTY, FREQUENCY-PENALTY, BEST-OF and LOGIT-BIAS.
+
+For more information, see the OpenAI API documentation at https://platform.openai.com/docs/api-reference/completions/create"
   (openai-request "https://api.openai.com/v1/chat/completions"
     :type "POST"
     :headers (openai--headers content-type key org-id)
