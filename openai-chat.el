@@ -114,8 +114,7 @@ This is a ping pong message, so you will only get one response."
                      (let ((choices (let-alist data .choices)))
                        (mapc (lambda (choice)
                                (let-alist choice
-                                 (let-alist .message
-                                   (message "%s: %s" .role (string-trim .content)))))
+                                (message (string-trim .text))))
                              choices)))
                    :max-tokens openai-chat-max-tokens
                    :temperature openai-chat-temperature
