@@ -32,7 +32,7 @@
 ;;; API
 
 ;;;###autoload
-(cl-defun openai-chat ( messages callback
+(cl-defun openai-chat ( prompt callback
                         &key
                         (content-type "application/json")
                         (key openai-key)
@@ -64,7 +64,7 @@ STREAM, STOP, MAX-TOKENS, PRESENCE-PENALTY, FREQUENCY-PENALTY, and LOGIT-BIAS."
     :headers (openai--headers content-type key org-id)
     :data (openai--json-encode
            `(("model"             . ,model)
-             ("messages"          . ,messages)
+             ("prompt"            . ,prompt)
              ("temperature"       . ,temperature)
              ("top-p"             . ,top-p)
              ("n"                 . ,n)
