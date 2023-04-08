@@ -39,13 +39,13 @@
                         org-id
                         (model "gpt-3.5-turbo")
                         suffix
+                        max-tokens
                         temperature
                         top-p
                         n
                         stream
                         logprobs
                         stop
-                        max-tokens
                         presence-penalty
                         frequency-penalty
                         best-of
@@ -69,13 +69,13 @@ STREAM, STOP, MAX-TOKENS, PRESENCE-PENALTY, FREQUENCY-PENALTY, and LOGIT-BIAS."
            `(("model"             . ,model)
              ("prompt"            . ,prompt)
              ("suffix"            . ,suffix)
+             ("max_tokens"        . ,max-tokens)
              ("temperature"       . ,temperature)
              ("top-p"             . ,top-p)
              ("n"                 . ,n)
              ("stream"            . ,stream)
              ("logprobs"          . ,logprobs)
              ("stop"              . ,stop)
-             ("max_tokens"        . ,max-tokens)
              ("presence_penalty"  . ,presence-penalty)
              ("frequency_penalty" . ,frequency-penalty)
              ("best_of"           . ,best-of)
