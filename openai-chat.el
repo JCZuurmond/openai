@@ -109,8 +109,7 @@ This is a ping pong message, so you will only get one response."
   (interactive)
   (if-let* ((user (read-string "What is your name? " "user"))
             (say  (read-string "Start the conversation: ")))
-      (openai-chat `[(("role"    . ,user)
-                      ("content" . ,say))]
+      (openai-chat say
                    (lambda (data)
                      (let ((choices (let-alist data .choices)))
                        (mapc (lambda (choice)
