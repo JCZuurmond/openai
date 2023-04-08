@@ -91,7 +91,7 @@ For more information, see the OpenAI API documentation at https://platform.opena
 ;;
 ;;; Application
 
-(defcustom openai-chat-max-tokens 4000
+(defcustom openai-chat-max-tokens 16
   "The maximum number of tokens to generate in the completion."
   :type 'integer
   :group 'openai)
